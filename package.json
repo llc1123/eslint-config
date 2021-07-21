@@ -6,6 +6,16 @@
   "author": "llc1123",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "url": "https://github.com/llc1123/eslint-config"
+  },
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.10"
   },
