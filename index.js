@@ -60,25 +60,8 @@ module.exports = {
     'no-template-curly-in-string': 'warn',
     'no-throw-literal': 'warn',
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
-    'no-unused-expressions': [
-      'error',
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-      },
-    ],
-    'no-use-before-define': [
-      'warn',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-      },
-    ],
     'no-useless-computed-key': 'warn',
     'no-useless-concat': 'warn',
-    'no-useless-constructor': 'warn',
     'no-useless-rename': [
       'warn',
       {
@@ -101,6 +84,12 @@ module.exports = {
         message: 'Please use import() instead.',
       },
     ],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
 
     'import/first': 'error',
     'import/no-amd': 'error',
@@ -114,9 +103,9 @@ module.exports = {
       },
     ],
 
+    'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
     'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
     'react/jsx-pascal-case': [
       'warn',
@@ -127,6 +116,41 @@ module.exports = {
     ],
     'react/no-typos': 'error',
     'react/style-prop-object': 'warn',
+
+    '@typescript-eslint/consistent-type-assertions': 'warn',
+    'no-array-constructor': 'off',
+    '@typescript-eslint/no-array-constructor': 'warn',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': 'warn',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      'warn',
+      {
+        functions: false,
+        classes: false,
+        variables: false,
+        typedefs: false,
+      },
+    ],
+    'no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+        allowTaggedTemplates: true,
+      },
+    ],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        args: 'none',
+        ignoreRestSiblings: true,
+      },
+    ],
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'warn',
 
     'prettier/prettier': [
       'warn',
@@ -139,33 +163,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['**/*.ts?(x)'],
       rules: {
-        '@typescript-eslint/consistent-type-assertions': 'warn',
-
-        'no-redeclare': 'off',
-        '@typescript-eslint/no-redeclare': 'warn',
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': [
-          'warn',
-          {
-            functions: false,
-            classes: false,
-            variables: false,
-            typedefs: false,
-          },
-        ],
-        'no-unused-expressions': 'off',
-        '@typescript-eslint/no-unused-expressions': [
-          'error',
-          {
-            allowShortCircuit: true,
-            allowTernary: true,
-            allowTaggedTemplates: true,
-          },
-        ],
-        'no-useless-constructor': 'off',
-        '@typescript-eslint/no-useless-constructor': 'warn',
+        'default-case': 'off',
       },
     },
   ],
