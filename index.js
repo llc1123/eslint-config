@@ -10,7 +10,6 @@ module.exports = {
     es2021: true,
   },
   parserOptions: {
-    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -29,6 +28,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
   ],
   rules: {
@@ -40,7 +40,6 @@ module.exports = {
     'no-extend-native': 'warn',
     'no-extra-bind': 'warn',
     'no-extra-label': 'warn',
-    'no-implied-eval': 'warn',
     'no-iterator': 'warn',
     'no-label-var': 'warn',
     'no-labels': ['warn', { allowLoop: true, allowSwitch: false }],
