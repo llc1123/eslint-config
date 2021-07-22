@@ -1,7 +1,7 @@
 # ESLint Configs
 
 
-Inspired by [eslint-plugin-react-app](https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app).
+Inspired by [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/main/packages/eslint-config-react-app).
 
 Supports React and Typescript.
 
