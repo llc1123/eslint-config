@@ -89,6 +89,7 @@ module.exports = {
       },
     ],
 
+    'import/no-unresolved': 'off',
     'import/first': 'error',
     'import/no-amd': 'error',
     'import/no-anonymous-default-export': 'warn',
