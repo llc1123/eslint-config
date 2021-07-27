@@ -88,6 +88,7 @@ module.exports = {
         allow: ['warn', 'error'],
       },
     ],
+    'no-constant-condition': ['warn', { checkLoops: false }],
 
     'import/no-unresolved': 'off',
     'import/first': 'error',
