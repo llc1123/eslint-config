@@ -24,10 +24,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
   rules: {
@@ -117,41 +115,6 @@ module.exports = {
     'react/no-typos': 'error',
     'react/style-prop-object': 'warn',
 
-    '@typescript-eslint/consistent-type-assertions': 'warn',
-    'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': 'warn',
-    'no-redeclare': 'off',
-    '@typescript-eslint/no-redeclare': 'warn',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'warn',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-        typedefs: false,
-      },
-    ],
-    'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': [
-      'error',
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-      },
-    ],
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      {
-        args: 'none',
-        ignoreRestSiblings: true,
-      },
-    ],
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': 'warn',
-
     'prettier/prettier': [
       'warn',
       {
@@ -164,8 +127,57 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts?(x)'],
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+      ],
       rules: {
         'default-case': 'off',
+
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        'no-array-constructor': 'off',
+        '@typescript-eslint/no-array-constructor': 'warn',
+        'no-redeclare': 'off',
+        '@typescript-eslint/no-redeclare': 'warn',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'warn',
+          {
+            functions: false,
+            classes: false,
+            variables: false,
+            typedefs: false,
+          },
+        ],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: true,
+            allowTernary: true,
+            allowTaggedTemplates: true,
+          },
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'warn',
+
+        'prettier/prettier': [
+          'warn',
+          {
+            singleQuote: true,
+            semi: false,
+            trailingComma: 'all',
+          },
+        ],
       },
     },
   ],
