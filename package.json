@@ -1,6 +1,6 @@
 {
   "name": "@llc1123/eslint-config",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "My favorite eslint configs",
   "main": "index.js",
   "author": "llc1123",
@@ -28,7 +28,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
