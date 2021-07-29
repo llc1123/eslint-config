@@ -3,6 +3,7 @@
 const restrictedGlobals = require('confusing-browser-globals')
 
 module.exports = {
+  root: true,
   parser: '@typescript-eslint/parser',
   env: {
     node: true,
