@@ -5,29 +5,16 @@ const restrictedGlobals = require('confusing-browser-globals')
 module.exports = {
   parser: '@typescript-eslint/parser',
   env: {
+    node: true,
     browser: true,
     commonjs: true,
     es2021: true,
   },
   parserOptions: {
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
     warnOnUnsupportedTypeScriptVersion: true,
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:import/recommended'],
   rules: {
     'array-callback-return': 'warn',
     'default-case': ['warn', { commentPattern: '^no default$' }],
@@ -100,29 +87,6 @@ module.exports = {
         alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
-
-    'react/prop-types': 'off',
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
-    'react/jsx-pascal-case': [
-      'warn',
-      {
-        allowAllCaps: true,
-        ignore: [],
-      },
-    ],
-    'react/no-typos': 'error',
-    'react/style-prop-object': 'warn',
-
-    'prettier/prettier': [
-      'warn',
-      {
-        singleQuote: true,
-        semi: false,
-        trailingComma: 'all',
-      },
-    ],
   },
   overrides: [
     {
@@ -130,11 +94,9 @@ module.exports = {
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
       ],
       rules: {
         'default-case': 'off',
-
         '@typescript-eslint/consistent-type-assertions': 'warn',
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'warn',
@@ -169,15 +131,6 @@ module.exports = {
         ],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
-
-        'prettier/prettier': [
-          'warn',
-          {
-            singleQuote: true,
-            semi: false,
-            trailingComma: 'all',
-          },
-        ],
       },
     },
   ],
