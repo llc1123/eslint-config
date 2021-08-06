@@ -1,6 +1,6 @@
 {
   "name": "@llc1123/eslint-config",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "My favorite eslint configs",
   "main": "index.js",
   "author": "llc1123",
@@ -12,6 +12,7 @@
   "files": [
     "index.js",
     "react.js",
+    "jest.js",
     "prettier.js"
   ],
   "publishConfig": {
@@ -27,6 +28,7 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
