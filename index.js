@@ -97,6 +97,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
       rules: {
+        '@typescript-eslint/prefer-optional-chain': 'warn',
+
         'default-case': 'off',
         '@typescript-eslint/consistent-type-assertions': 'warn',
         'no-array-constructor': 'off',
