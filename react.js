@@ -1,7 +1,13 @@
 'use strict'
 
 module.exports = {
-  extends: ['./', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  extends: [
+    './',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:react-refresh',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -26,5 +32,9 @@ module.exports = {
     ],
     'react/no-typos': 'error',
     'react/style-prop-object': 'warn',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
   },
 }

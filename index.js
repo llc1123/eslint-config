@@ -13,6 +13,7 @@ module.exports = {
   },
   parserOptions: {
     sourceType: 'module',
+    ecmaVersion: 'latest',
     warnOnUnsupportedTypeScriptVersion: true,
   },
   extends: ['eslint:recommended', 'plugin:import/recommended'],
@@ -94,7 +95,8 @@ module.exports = {
       files: ['**/*.ts?(x)'],
       extends: [
         'plugin:import/typescript',
-        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
       ],
       rules: {
         '@typescript-eslint/prefer-optional-chain': 'warn',
