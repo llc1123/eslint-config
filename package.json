@@ -1,6 +1,6 @@
 {
   "name": "@llc1123/eslint-config",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "My favorite eslint configs",
   "main": "index.js",
   "author": "llc1123",
